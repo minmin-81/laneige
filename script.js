@@ -1,19 +1,26 @@
 $(document).ready(function(){
+
     auto = setInterval(function(){
         if(click ==0){
         click = 1;
-        if(slide_num <= -500){slide_num = 0; $('.slide_bg').css({'left':'0'})}
+        if(slide_num <= -500){
+            slide_num = 0; $('.slide_bg').css({'left':'0'})
+        }
+
         slide_num = slide_num - 100; 
+
         $('.slide_bg').animate({'left':slide_num+'%'},500,function(){
             click = 0;
         })
+
         if(slide_num <= -500){
         $('.slide_btbox li').eq(0).css({'width':'12px','height':'12px'}).siblings().css({'background-color':'#666','width':'8px','height':'8px'})}
         $('.slide_btbox li').eq(slide_num/-100).css({'width':'12px','height':'12px'}).siblings().css({'background-color':'#666','width':'8px','height':'8px'}) 
         }
+
     },3000)
 
-    play_num = 0;
+    let play_num = 0;
     $('.slide_pausebt').click(function(){
         if(play_num == 0){
         play_num = 1;
