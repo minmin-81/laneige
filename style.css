@@ -1,9 +1,16 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NamumSquare';
+    src: url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+}
+
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     font-family: 'NanumSquare', sans-serif;
 }
+
 header {
     width: 100%;
     height: 59px;
@@ -14,37 +21,44 @@ header {
     top: 0;
     background-color: #fff;
 }
+
 .logo {
     width: 130px;
     height: 22px;
     float: left;
     margin-top: 17px;
     margin-left: 50px;
-} /*fl의 위아래정렬은 무조건 mt로*/
+}
+
 .logo img {
     width: 100%;
     vertical-align: top;
-} /*인라인 요소의 수직정렬은 va:t */
+}
+
 .logo:hover {
     cursor: pointer;
 }
-.icon {
+
+.main_icon {
     height: 20px;
     float: right;
     margin-right: 50px;
     margin-top: 19px;
 }
-.icon li {
+
+.main_icon li {
     float: left;
     margin-right: 20px;
 }
-.icon li:hover {
+
+.main_icon li:hover {
     cursor: pointer;
 }
-.icon li img {
+
+.main_icon li img {
     vertical-align: top;
 }
-/* fl:l fl:r를 사용하면 가운데는 pos:a, 가운데 정렬을 d:ib로 사용했으면 좌우는 pos:a 로 사용해야 함.*/
+
 .main_menu {
     width: 800px;
     position: absolute;
@@ -54,16 +68,19 @@ header {
     margin: auto;
     text-align: center;
 }
+
 .main_menu li {
     display: inline-block;
     padding: 0 15px;
     font-weight: 400;
     position: relative;
 }
+
 .main_menu li:hover {
     cursor: pointer;
     font-weight: 900;
 }
+
 .main_menu li .menu_line {
     width: 0;
     height: 3px;
@@ -74,22 +91,31 @@ header {
     background-color: .000;
     transition: 0.5s;
 }
+
 .main_menu li:hover .menu_line {
     width: 100%;
 }
+
 .hidden_menu_bt {
     float: right;
     margin-top: 20px;
     margin-right: 20px;
     display: none;
 }
-/*header영역 끝, slide영역 시작*/
+
+/* header 끝, slide section 시작 */
+
 .slide {
     width: 1920px;
     height: 790px;
     position: relative;
     overflow: hidden;
 }
+
+.slide_title {
+    display: none;
+}
+
 .slide_bg {
     width: 600%;
     height: 790px;
@@ -97,12 +123,14 @@ header {
     left: 0;
     top: 0;
 }
+
 .slide_bg li {
     width: 16.66666%;
     height: 790px;
     float: left;
     position: relative;
 }
+
 .slide_bg li video {
     width: 1920px;
     left: 50%;
@@ -110,21 +138,27 @@ header {
     position: absolute;
     top: -100px;
 }
+
 .slide_bg li:nth-child(1) {
     background: #fff url('images/slide1.jpg') center 0 no-repeat;
 }
+
 .slide_bg li:nth-child(2) {
     background: #fff url('images/slide2.png') center 0 no-repeat;
 }
+
 .slide_bg li:nth-child(3) {
     background: #fff url('images/slide3.png') center 0 no-repeat;
 }
+
 .slide_bg li:nth-child(5) {
     background: #fff url('images/slide5.png') center 0 no-repeat;
 }
+
 .slide_bg li:nth-child(6) {
     background: #fff url('images/slide1.jpg') center 0 no-repeat;
 }
+
 .slide_textbox {
     width: 380px;
     height: 200px;
@@ -134,6 +168,7 @@ header {
     bottom: 0;
     margin: auto;
 }
+
 .slide_textbox button {
     width: 40px;
     height: 20px;
@@ -141,20 +176,24 @@ header {
     color: #fff;
     border: none;
 }
+
 .slide_textbox h1 {
     margin-top: 20px;
     font-size: 46px;
     font-weight: 400;
 }
+
 .slide_textbox h3 {
     margin-top: 30px;
     font-size: 20px;
     font-weight: 400;
 }
+
 .slide_textbox h4 {
     margin-top: 5px;
     font-weight: 500;
 }
+
 .slide_btbox {
     width: 200px;
     height: 20px;
@@ -165,9 +204,11 @@ header {
     margin: auto;
     position: absolute;
 }
+
 .slide_btbox img {
     vertical-align: middle;
 }
+
 .slide_btbox .slide_leftbt {
     width: 20px;
     height: 20px;
@@ -190,12 +231,14 @@ header {
     margin-top: 2px;
     cursor: pointer;
 }
+
 .slide_btbox ul {
     position: absolute;
     right: 0;
     left: 0;
     margin: auto auto auto 26px;
 }
+
 .slide_btbox li {
     width: 8px;
     height: 8px;
@@ -206,10 +249,12 @@ header {
     margin: 0 5px;
     cursor: pointer;
 }
+
 .slide_btbox li:first-child {
     width: 12px;
     height: 12px;
 }
+
 .slide_btbox .slide_rightbt {
     width: 20px;
     height: 20px;
@@ -218,6 +263,7 @@ header {
     z-index: 99;
     right: -10px;
 }
+
 .slide_pausebt {
     position: absolute;
     left: 30px;
@@ -225,7 +271,9 @@ header {
     z-index: 101;
     cursor: pointer;
 }
-/*	slide 영역 끝, best 영역 시작*/
+
+/* slide section 끝, best section 시작 */
+
 .best {
     width: 100%;
     height: 880px;
@@ -233,6 +281,11 @@ header {
     text-align: center;
     padding-bottom: 100px;
 }
+
+.best_title {
+    display: none;
+}
+
 .best_bg {
     width: 100%;
     height: 450px;
@@ -241,14 +294,17 @@ header {
     right: 0;
     z-index: -1;
 }
+
 .best_bg video {
     width: 1920px;
 }
+
 .best > h2 {
     font-size: 44px;
     padding-top: 100px;
     font-weight: 900;
 }
+
 .best_box {
     width: 1200px;
     height: 700px;
@@ -256,11 +312,13 @@ header {
     position: relative;
     overflow: hidden;
 }
+
 .best_box ul {
     width: 2400px;
     margin-top: 50px;
     position: absolute;
 }
+
 .best_box li {
     width: 380px;
     height: 650px;
@@ -268,16 +326,20 @@ header {
     float: left;
     position: relative;
 }
+
 .best_box li:hover {
     cursor: pointer;
 }
+
 .best_box li img {
     width: 90%;
     transition: 0.3s;
 }
+
 .best_box li:hover .best_img {
     transform: rotate(-10deg);
 }
+
 .best_box li .pickme {
     position: absolute;
     right: 30px;
@@ -287,24 +349,29 @@ header {
     height: 52px;
     opacity: 0;
 }
+
 .best_box li:hover .pickme {
     opacity: 1;
 }
+
 .best_box li h2 {
     font-size: 18px;
     color: #5181C2;
     display: inline-block;
     margin-top: 10px;
 }
+
 .best_box li h3 {
     margin-top: 10px;
     font-weight: 400;
     font-size: 18px;
 }
+
 .best_box li .dot {
     width: 40px;
     height: 40px;
 }
+
 .best_box li h5 {
     margin-top: 20px;
     font-size: 16px;
@@ -312,11 +379,13 @@ header {
     line-height: 1.5;
     color: #777;
 }
+
 .best_box li p {
     margin-top: 10px;
     font-size: 12px;
     color: #777;
 }
+
 .best_btbox {
     width: 1200px;
     height: 200px;
@@ -329,34 +398,42 @@ header {
     padding-top: 80px;
     box-sizing: border-box;
 }
+
 .best_leftbt {
     float: left;
     cursor: pointer;
 }
+
 .best_rightbt {
     float: right;
     cursor: pointer;
 }
-/**/
-.section1 {
+
+/* best section 끝, goods1 시작 */
+
+.goods1 {
     width: 1221px;
     overflow: hidden;
     margin: 30px auto auto;
 }
-.section1 li {
+
+.goods1 li {
     width: 323px;
     height: 650px;
     float: left;
     margin: 42px;
     position: relative;
 }
-.section1 li:hover {
+
+.goods1 li:hover {
     cursor: pointer;
 }
-.section1 li img {
+
+.goods1 li img {
     width: 100%;
 }
-.section1 li h2 {
+
+.goods1 li h2 {
     width: 200px;
     text-align: right;
     position: absolute;
@@ -367,63 +444,76 @@ header {
     color: #5181C2;
     letter-spacing: 1.5px;
 }
-.section1 li h2:hover {
+
+.goods1 li h2:hover {
     cursor: pointer;
 }
-.section1 li h3 {
+
+.goods1 li h3 {
     margin-top: 15px;
     font-weight: 400;
 }
-.section1 li h4 {
+
+.goods1 li h4 {
     margin-top: 10px;
     font-weight: 400;
     font-size: 15px;
 }
-/**/
-.section2 {
+
+/* goods1 끝, goods2 시작*/
+
+.goods2 {
     width: 1221px;
     height: 1480px;
     margin: 100px auto auto;
     position: relative;
 }
-.section2 li {
+
+.goods2 li {
     position: relative;
 }
-.section2 li:hover {
+
+.goods2 li:hover {
     cursor: pointer;
 }
-.section2 li img {
+
+.goods2 li img {
     width: 90%;
 }
-.section2 li:nth-child(1) {
+
+.goods2 li:nth-child(1) {
     width: 730px;
     height: 530px;
     position: absolute;
     left: 40px;
     top: 20px;
 }
-.section2 li:nth-child(2) {
+
+.goods2 li:nth-child(2) {
     width: 420px;
     height: 760px;
     position: absolute;
     right: 0;
     top: 50px;
 }
-.section2 li:nth-child(3) {
+
+.goods2 li:nth-child(3) {
     width: 368px;
     height: 600px;
     position: absolute;
     left: 40px;
     bottom: 200px;
 }
-.section2 li:nth-child(4) {
+
+.goods2 li:nth-child(4) {
     width: 716px;
     height: 520px;
     position: absolute;
     right: 0;
     bottom: 0;
 }
-.section2 li h2 {
+
+.goods2 li h2 {
     width: 200px;
     position: absolute;
     transform: rotate(-90deg);
@@ -433,28 +523,35 @@ header {
     text-align: right;
     color: #5181C2;
 }
-.section2 li h2:hover {
+
+.goods2 li h2:hover {
     cursor: pointer;
 }
-.section2 li h3 {
+
+.goods2 li h3 {
     margin-top: 15px;
     font-weight: 400;
 }
-.section2 li h4 {
+
+.goods2 li h4 {
     margin-top: 10px;
     font-weight: 400;
 }
-/**/
+
+/* goods2 끝, sns section 시작 */
+
 .sns {
     text-align: center;
     margin-top: 100px;
     position: relative;
 }
-.sns h2 {
+
+.sns h1 {
     font-size: 40px;
     letter-spacing: 2px;
     font-weight: 900;
 }
+
 .sns h3 {
     margin-top: 10px;
     font-size: 17px;
@@ -462,6 +559,7 @@ header {
     color: #666;
     letter-spacing: 0.5px;
 }
+
 .sns_slidewrap {
     width: 1050px;
     height: 200px;
@@ -469,6 +567,7 @@ header {
     position: relative;
     overflow: hidden;
 }
+
 .sns_slide {
     width: 400%;
     margin: 20px auto auto;
@@ -476,6 +575,7 @@ header {
     position: absolute;
     left: 0;
 }
+
 .sns_slide li {
     width: 4.75%;
     height: 200px;
@@ -484,9 +584,11 @@ header {
     overflow: hidden;
     position: relative;
 }
+
 .sns_slide li:hover {
     cursor: pointer;
 }
+
 .sns_slide li img {
     width: 100%;
     position: absolute;
@@ -494,9 +596,11 @@ header {
     top: 0;
     transition: 0.3s;
 }
+
 .sns_slide li img:hover {
     top: -10px;
 }
+
 .sns_textbox {
     width: 100%;
     height: 60px;
@@ -509,12 +613,15 @@ header {
     box-sizing: border-box;
     border-top: none;
 }
+
 .sns ul li:hover .sns_textbox {
     bottom: 20px;
 }
+
 .sns_textbox h5 {
     margin-top: 10px;
 }
+
 .sns_textbox p {
     margin-top: 10px;
     padding-left: 10px;
@@ -525,6 +632,7 @@ header {
     font-size: 13px;
     text-align: center;
 }
+
 .sns_btbox {
     width: 1200px;
     height: 100px;
@@ -536,6 +644,7 @@ header {
     margin: auto;
     padding-top: 30px;
 }
+
 .sns_bt_right {
     width: 40px;
     height: 80px;
@@ -543,6 +652,7 @@ header {
     transition: 0.3s;
     float: right;
 }
+
 .sns_bt_left {
     width: 40px;
     height: 80px;
@@ -551,14 +661,17 @@ header {
     cursor: pointer;
     float: left;
 }
+
 .sns_bt_right img {
     width: 20px;
     height: 20px;
 }
+
 .sns_bt_right:hover {
     cursor: pointer;
     background-color: #eee;
 }
+
 .sns button {
     width: 120px;
     height: 32px;
@@ -567,26 +680,32 @@ header {
     background-color: transparent;
     transition: 0.3s;
 }
+
 .sns:hover button {
     cursor: pointer;
     border: none;
     background-color: #0389d1;
     color: #fff;
 }
-/**/
+
+/* sns section 끝, footer 시작 */
+
 footer {
     width: 100%;
     margin-top: 100px;
 }
+
 .footer1 {
     width: 100%;
     border-top: 1px solid #000;
 }
+
 .footer2 {
     width: 100%;
     border-top: 1px solid #000;
     padding-bottom: 100px;
 }
+
 .footer_box1 {
     width: 1200px;
     height: 45px;
@@ -594,121 +713,69 @@ footer {
     overflow: hidden;
     line-height: 45px;
 }
+
 .footer_box1_left {
     float: left;
 }
+
 .footer_box1_left li {
     float: left;
     margin-right: 40px;
     font-size: 14px;
 }
+
 .footer_box1_left li:nth-child(4) {
     font-weight: 900;
 }
+
 .footer_box1_left li:hover {
     cursor: pointer;
 }
+
 .footer_box1_right {
     float: right;
     padding: 8px 0;
 }
+
 .footer_box1_right li {
     float: left;
     margin-left: 20px;
 }
+
 .footer_box1_right li:hover {
     cursor: pointer;
 }
+
 .footer_box2 {
     width: 1200px;
     margin: auto;
     overflow: hidden;
 }
+
 .footer_box2_left ul {
     float: left;
     margin-top: 30px;
 }
+
 .footer_box2_left ul li {
     float: left;
     margin-right: 20px;
     font-size: 14px;
 }
+
 .footer_box2_left li span {
     font-weight: 900;
 }
+
 .footer_box2 img {
     width: 70px;
     height: 50px;
     float: right;
     margin-top: 20px;
 }
+
 .footer_box2 img:hover {
     cursor: pointer;
 }
-@media all and(min-width:0px) {
-    /*0~767 모바일*/
-    .logo {
-        width: 100px;
-        height: 17px;
-        margin-top: 21px;
-        margin-left: 20px;
-    }
-    /*mt,ml도 바뀌어야함*/
-    .menu {
-        display: none;
-    }
-    .icon li:nth-child(2),
-    .icon li:nth-child(1) {
-        display: none;
-    }
-    .hidden_menu_bt {
-        display: inline;
-    }
-    .icon {
-        margin-right: 5px;
-    }
-} /*모바일 끝*/
-@media all and(min-width:768px) {
-    /*768~1024 태블릿pc*/
-    .logo {
-        width: 130px;
-        height: 22px;
-        margin-top: 17px;
-        margin-left: 50px;
-    }
-    .menu {
-        display: block;
-    }
-    .icon li:nth-child(2),
-    .icon li:nth-child(1) {
-        display: block;
-    }
-    .hidden_menu_bt {
-        display: none;
-    }
-    .icon {
-        margin-right: 50px;
-    }
-} /*태블릿 끝*/
-@media all and(min-width:1024px) {
-    /*1024~ 그냥 pc*/
-    .logo {
-        width: 130px;
-        height: 22px;
-        margin-top: 17px;
-        margin-left: 50px;
-    }
-    .menu {
-        display: block;
-    }
-    .icon li:nth-child(2),
-    .icon li:nth-child(1) {
-        display: block;
-    }
-    .hidden_menu_bt {
-        display: none;
-    }
-    .icon {
-        margin-right: 50px;
-    }
-} /*pc 끝*/
+
+/* footer 끝 */
